@@ -14,7 +14,7 @@ Use your desktop Claude Code, Codex or Gemini CLI coding agent from your phone. 
 
 **Do I need to deploy anything?** No. Sled runs 100% on your machine. It's written in Typescript (and runs with wrangler locally). Nothing is deployed to the cloud.
 
-**How does it control Claude Code?** Via [ACP (Agent Control Protocol)](https://github.com/ACP-Labs/protocol) — a standard protocol that wraps CLI agents. The `claude-code-acp` adapter runs Claude Code as a subprocess and exposes it via JSON-RPC.
+**How does it control Claude Code?** Via [ACP (Agent Control Protocol)](https://github.com/ACP-Labs/protocol) — a standard protocol that wraps CLI agents. The `claude-agent-acp` adapter runs Claude Code as a subprocess and exposes it via JSON-RPC.
 
 **What data leaves my machine?**
 
@@ -65,7 +65,7 @@ You need a coding agent installed:
 # Claude Code
 npm install -g @anthropic-ai/claude-code@latest
 # You also need Agent Control Protocol adapter
-npm install -g @zed-industries/claude-code-acp
+npm install -g @zed-industries/claude-agent-acp
 
 # Codex
 npm install -g @openai/codex
@@ -172,7 +172,7 @@ To completely remove Sled:
 rm -rf /path/to/this/repo/sled
 
 # 2. Remove the ACP adapters (optional)
-npm uninstall -g @zed-industries/claude-code-acp
+npm uninstall -g @zed-industries/claude-agent-acp
 npm uninstall -g @zed-industries/codex-acp
 ```
 
