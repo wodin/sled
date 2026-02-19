@@ -46,7 +46,7 @@ function ensureCliBinsOnPath(existingPath?: string): string {
 
 const AGENT_CONFIGS: Record<AgentType, { command: string; args: string[] }> = {
   gemini: { command: "gemini", args: ["--experimental-acp"] },
-  claude: { command: "claude-code-acp", args: [] },
+  claude: { command: "claude-agent-acp", args: [] },
   codex: { command: "codex-acp", args: [] },
 };
 
